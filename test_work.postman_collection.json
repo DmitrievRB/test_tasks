@@ -8,9 +8,50 @@
 	"item": [
 		{
 			"name": "photoID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"photoID nasa api\", function () {\r",
+							"   var jsonData=JSON.parse(responseBody);\r",
+							"   pm.collectionVariables.set(\"photoID\",jsonData.photos[1].id);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=DEMO_KEY&earth_date=2022-1-21",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"mars-photos",
+						"api",
+						"v1",
+						"rovers",
+						"curiosity",
+						"photos"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "DEMO_KEY"
+						},
+						{
+							"key": "earth_date",
+							"value": "2022-1-21"
+						}
+					]
+				}
 			},
 			"response": []
 		}
