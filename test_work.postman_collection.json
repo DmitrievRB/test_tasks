@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "a3efb211-65c7-4d63-b29f-150d9a11e11b",
+		"name": "test_work",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23288719"
+	},
+	"item": [
+		{
+			"name": "photoID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "photoID",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
